@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+:root {
+  --background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+
+  --form-background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+body {
+  font-family: "Poppins", "sans-serif";
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+.container {
+  background-image: linear-gradient(to right, #556270, #ff6b6b);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+form {
+  width: 50vh;
+  background: var(--form-background);
+
+  border-radius: 0.5em;
+  padding: 3em 4em;
+}
+
+.login {
+  position: relative;
+  top: -0.5em;
+}
+
+.login:after {
+  content: "";
+  background: white;
+  border-radius: 2em;
+  position: absolute;
+  width: 25%;
+  height: 4px;
+
+  bottom: -4px;
+  left: 0;
+  right: 0;
+}
+
+.sign-in {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background: var(--background);
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+
+  width: 90%;
+  padding: 1em;
+  margin: 0.5em 0;
+  border-radius: 40em;
+  border: none;
+}
+
+input,
+select,
+textarea {
+  color: rgb(119, 108, 108);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(119, 108, 108);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+  opacity: 1; /* Firefox */
+}
+
+.button {
+  background-color: rgb(240, 234, 234);
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.3);
+  color: rgb(107, 100, 100);
+  font-weight: bold;
+
+  width: 60px;
+  margin: 1em 0.5em 1.5em;
+  padding: 0.5em 1em;
+  border-radius: 50em;
+  text-align: center;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+  position: relative;
+  margin: 0 1em;
+}
+
+.forget-password,
+.sign-up {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+.circle1,
+.circle2 {
+  position: absolute;
+  background: var(--background);
+  width: 25em;
+  height: 25em;
+  border-radius: 50em;
+  opacity: 20%;
+}
+
+.circle1 {
+  top: -10em;
+  left: 17em;
+}
+
+.circle2 {
+  top: 17em;
+  right: 17em;
+}
+
+.cube-right1,
+.cube-right2,
+.cube-left {
+  animation: cube-animation 4s linear infinite;
+  position: absolute;
+  border-radius: 0.5em;
+}
+
+.cube-right1,
+.cube-right2 {
+  background: linear-gradient(
+    to top right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.6)
+  );
+}
+
+.cube-right1 {
+  width: 6em;
+  height: 6em;
+
+  top: 4em;
+  right: 30em;
+}
+
+.cube-right2 {
+  width: 5em;
+  height: 5em;
+
+  bottom: 15em;
+  right: 29em;
+}
+
+.cube-left {
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.6)
+  );
+
+  width: 8em;
+  height: 8em;
+
+  bottom: 15em;
+  left: 27em;
+}
+
+@keyframes cube-animation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+}
