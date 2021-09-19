@@ -120,8 +120,8 @@ p {
   padding: 0.5em 0;
 }
 
-.circle1,
-.circle2 {
+.const-circle1,
+.const-circle2 {
   position: absolute;
   background: var(--background);
   width: 25em;
@@ -130,60 +130,60 @@ p {
   opacity: 20%;
 }
 
-.circle1 {
+.const-circle1 {
   top: -10em;
   left: 17em;
 }
 
-.circle2 {
+.const-circle2 {
   top: 17em;
   right: 17em;
 }
 
-.cube-right1,
-.cube-right2,
-.cube-left {
+.moving-circle-right1,
+.moving-circle-right2,
+.moving-circle-left {
   animation: cube-animation 4s linear infinite;
   position: absolute;
-  border-radius: 0.5em;
+  border-radius: 50em;
 }
 
-.cube-right1,
-.cube-right2 {
+.moving-circle-right1,
+.moving-circle-right2 {
   background: linear-gradient(
     to top right,
     rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.6)
+    rgba(255, 255, 255, 0.9)
   );
 }
 
-.cube-right1 {
-  width: 6em;
-  height: 6em;
+.moving-circle-right1 {
+  width: 12em;
+  height: 12em;
 
   top: 4em;
-  right: 30em;
+  right: 27em;
 }
 
-.cube-right2 {
-  width: 5em;
-  height: 5em;
-
-  bottom: 15em;
-  right: 29em;
-}
-
-.cube-left {
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.6)
-  );
-
+.moving-circle-right2 {
   width: 8em;
   height: 8em;
 
-  bottom: 15em;
+  bottom: 10em;
+  right: 27em;
+}
+
+.moving-circle-left {
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.9)
+  );
+
+  width: 9em;
+  height: 9em;
+
+  bottom: 17em;
   left: 27em;
 }
 
