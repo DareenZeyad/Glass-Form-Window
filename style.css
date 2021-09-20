@@ -101,12 +101,50 @@ textarea {
   border-radius: 50em;
   text-align: center;
   cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: white;
 }
 
 a {
+  text-decoration: none;
   color: white;
   position: relative;
   margin: 0 1em;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 0%;
+  height: 2px;
+
+  bottom: -4px;
+  left: 0;
+  right: 0;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+a:hover::after {
+  animation: scale-underline 3s linear infinite;
+}
+
+@keyframes scale-underline {
+  0%,
+  100% {
+    width: 100%;
+  }
+  50% {
+    width: 0%;
+  }
 }
 
 .forget-password,
